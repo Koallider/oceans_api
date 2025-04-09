@@ -1,0 +1,26 @@
+server:
+  port: 8442
+  ssl:
+    key-alias: "tomcat"
+    key-store: "/path/to/keytore"
+    key-store-password: "password"
+    keyStoreType: "PKCS12"
+    #client-auth: NEED
+    enabled: true
+
+logging:
+  level:
+    root: WARN
+    org.springframework.web: DEBUG
+    org.springframework.transaction.interceptor.TransactionInterceptor: ERROR
+    org.hibernate: ERROR
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: dbusername
+    password: dbpassword
+    url: jdbc:postgresql://localhost:5433/database_name
+  jpa:
+    show-sql: true
+    database: postgresql
